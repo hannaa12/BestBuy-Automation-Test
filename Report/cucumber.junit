@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="1,485.629" tests="8" skipped="0" failures="0" errors="0">
+<testcase classname="As a user, I want to test the Best Buy sign-in page to ensure proper validation for invalid input formats." name="User should not be able to sign in with an invalid email address format - #1.1" time="107.755">
+<system-out><![CDATA[
+Given User navigates to the Best Buy sign-in page...........................passed
+And All sign-in fields should be enabled....................................passed
+When User enters invalid email format "notAnEmail"..........................passed
+And Clicks the sign-in button...............................................passed
+Then User should see the invalid email address format alert "Please enter a valid email address.".passed
+]]></system-out>
+</testcase>
+<testcase classname="As a user, I want to test the Best Buy sign-in page to ensure proper validation for invalid input formats." name="User should not be able to sign in with an invalid email address format - #1.2" time="51.511">
+<system-out><![CDATA[
+Given User navigates to the Best Buy sign-in page...........................passed
+And All sign-in fields should be enabled....................................passed
+When User enters invalid email format "1@missingdomain".....................passed
+And Clicks the sign-in button...............................................passed
+Then User should see the invalid email address format alert "Please enter a valid email address.".passed
+]]></system-out>
+</testcase>
+<testcase classname="As a user, I want to test the Best Buy sign-in page to ensure proper validation for invalid input formats." name="User should not be able to sign in with an invalid password format - #1.1" time="41.351">
+<system-out><![CDATA[
+Given User navigates to the Best Buy sign-in page...........................passed
+And All sign-in fields should be enabled....................................passed
+When User enters valid email "user@bestbuy.com" and invalid password format "12345".passed
+And Clicks the sign-in button...............................................passed
+Then User should see the invalid password format alert "Please enter your password. It must be 6 to 30 characters and contain at least one number and one letter.".passed
+]]></system-out>
+</testcase>
+<testcase classname="As a user, I want to test the Best Buy sign-in page to ensure proper validation for invalid input formats." name="User should not be able to sign in with an invalid password format - #1.2" time="50.501">
+<system-out><![CDATA[
+Given User navigates to the Best Buy sign-in page...........................passed
+And All sign-in fields should be enabled....................................passed
+When User enters valid email "test@bestbuy.com" and invalid password format "short".passed
+And Clicks the sign-in button...............................................passed
+Then User should see the invalid password format alert "Please enter your password. It must be 6 to 30 characters and contain at least one number and one letter.".passed
+]]></system-out>
+</testcase>
+<testcase classname="As a user, I want to search for an Apple phone, filter by brand, and add it to the cart for future purchase." name="User successfully searches results by &quot;phones&quot; in the search bar and gets results" time="371.643">
+<system-out><![CDATA[
+Given User navigates to the Best Buy homepage...............................passed
+When User enters "phones" in the search bar.................................passed
+And User clicks on the Search button........................................passed
+Then User should see a list of phones displayed.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="As a user, I want to search for an Apple phone, filter by brand, and add it to the cart for future purchase." name="User checks the Apple brand filter checkbox" time="266.639">
+<system-out><![CDATA[
+Given User navigates to the Best Buy homepage...............................passed
+Given User has searched for "phones"........................................passed
+When User clicks on the brand dropdown......................................passed
+And User checks the Apple brand filter checkbox.............................passed
+Then User should see only Apple phones in the search results................passed
+]]></system-out>
+</testcase>
+<testcase classname="As a user, I want to verify that the cart is empty before adding any items so that I can proceed with shopping." name="User should see that the cart is empty before adding items" time="251.936">
+<system-out><![CDATA[
+Given User navigates to the Best Buy homepage...............................passed
+When User clicks on the Cart icon...........................................passed
+Then User should see the message "Looks like it's empty!"...................passed
+]]></system-out>
+</testcase>
+<testcase classname="As a user, I want to select options and start activation for an Apple phone." name="User selects storage, color and starts the phone activation" time="343.203">
+<system-out><![CDATA[
+Given User navigates to the Phone page......................................passed
+When User selects the storage option........................................passed
+And User selects the color option Midnight..................................passed
+And User clicks the Start Activation button.................................passed
+Then User should see the activation confirmation message....................passed
+]]></system-out>
+</testcase>
+</testsuite>
